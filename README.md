@@ -2,23 +2,25 @@
 
 ## Regras de Negócio 🔵
 
-
 ### Versão 1.0
 
     Banco de dados 🌴
     - Stock/Estoque
         - Nome
-        - Custo
-        - Valor
+        - Preço de Custo
+        - Preço de Venda
+        - Quantidade
+        - Validade do produto
         - Descrição
     - User/Usuário
+        - Username
         - Nome
-        - Função
+        - Cargo
         - E-mail 
         - Senha
 
     Rotas 🌵
-    / (para testar)
+    /hi (para testar)
     /all-stock (para ver todos os produtos)
     /modify-product (para modificar produto)
     /modify-user (para modificar usuário)
@@ -31,10 +33,10 @@ Backend 🟨
 
 - [x] Instalar os primeiros pacotes
 - [x] Iniciar o servidor 
-- [ ] Conectar o banco de dados ao servidor
-- [ ] Criar banco de dados Stock (Estoque).
-- [ ] Criar banco de dados Users (Usuário)
-- [ ] Rota para capturar todos os produtos
+- [x] Conectar o banco de dados ao servidor
+- [x] Criar banco de dados Stock (Estoque).
+- [x] Criar banco de dados Users (Usuário)
+- [ ] Rota para mostrar todos os produtos
 - [ ] Rota para cadastrar produto
 - [ ] Rota para cadastrar usuário
 - [ ] Rota para modificar produto
