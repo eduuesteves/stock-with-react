@@ -20,6 +20,10 @@ server.get("/", async (req: Request, res: Response) => {
          return res.json(a[0]);
 })
 
+/**
+ * Stock
+ */
+
 server.get("/create-table-stock", async (req: Request, res: Response) => {
     try {
         const query = "CREATE TABLE IF NOT EXISTS stock (`idproduct` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(50) NOT NULL, `cost_price` FLOAT NOT NULL, `sale_price` FLOAT NOT NULL, `quantitty` INT NOT NULL, `product_validity` DATE NOT NULL, `description` VARCHAR(100) NOT NULL, PRIMARY KEY (`idproduct`), UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE);"
@@ -32,6 +36,22 @@ server.get("/create-table-stock", async (req: Request, res: Response) => {
     }
 });
 
+server.get("/all-stock", async (req: Request, res: Response) => {
+    try {
+        const query = "SELECT * FROM stock";
+        const all_stock = await connect.query(query);
+        console.log("Encontramos algo!");
+        return res.send(all_stock[0]);
+    } catch(err) {
+        console.log("Puts! Algo deu errado\n" + err);
+    }
+
+});
+
+
+/**
+ * User
+ */
 server.get("/create-table-user", async (req: Request, res: Response) => {
     try {
         const query = "CREATE TABLE IF NOT EXISTS user (`iduser` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(50) NOT NULL, `username` VARCHAR(15) NOT NULL, `email` VARCHAR(40) NOT NULL, `password` VARCHAR(16) NOT NULL, `office` VARCHAR(20) NOT NULL, PRIMARY KEY (`iduser`), UNIQUE INDEX `username_UNIQUE` (`username` ASC) VISIBLE);"

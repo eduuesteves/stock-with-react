@@ -34,15 +34,14 @@ Backend 🟨
 - [x] Instalar os primeiros pacotes
 - [x] Iniciar o servidor 
 - [x] Conectar o banco de dados ao servidor
-- [x] Criar banco de dados Stock (Estoque).
-- [x] Criar banco de dados Users (Usuário)
-- [ ] Rota para mostrar todos os produtos
+- [x] Criar banco de dados dbstock (Que controlará todas as tabelas).
+- [x] Rota para mostrar todos os produtos
 - [ ] Rota para cadastrar produto
 - [ ] Rota para cadastrar usuário
 - [ ] Rota para modificar produto
 - [ ] Rota para modificar usuário
-- [ ] Rota para criar tabela usuário
-- [ ] Rota para criar tabela stock
+- [x] Rota para criar tabela usuário
+- [x] Rota para criar tabela stock
 - [ ] Testar todas as rotas
 
 Frontend 🟪
